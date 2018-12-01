@@ -1,5 +1,9 @@
 require "zikrash/version"
 
 module Zikrash
-  # Your code goes here...
+  class << self
+    def ping
+      puts 'pong'
+    end
+  end
 end
