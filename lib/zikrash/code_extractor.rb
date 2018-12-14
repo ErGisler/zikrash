@@ -1,4 +1,3 @@
-require 'file'
 require 'pathname'
 
 module Zikrash

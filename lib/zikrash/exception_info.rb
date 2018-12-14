@@ -7,6 +7,8 @@ module Zikrash
     attr_accessor :relevant_code
 
     def initialize(exception)
+      return false unless (exception.respond_to?(:message) && exception.respond_to?(:backtrace))
+
       self.exception_class = exception.is_a?(Class) ? exception.to_s : exception.class.to_s
       self.message = exception.message
       self.full_backtrace = exception.backtrace
