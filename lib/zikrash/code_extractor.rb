@@ -6,7 +6,7 @@ module Zikrash
     attr_accessor :line_number
 
     def initialize(backtrace_line)
-      self.file_location = backtrace_line.split(':')[0].to_s
+      self.file_location = "#{Rails.root}/#{backtrace_line.split(':')[0]}"
       self.line_number = backtrace_line.split(':')[1].to_i
       self
     end
